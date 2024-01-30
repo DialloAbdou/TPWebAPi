@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "tpWebminiAPi": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:50249;http://localhost:50250"
+    }
+  }
+}
