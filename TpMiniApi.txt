@@ -1,0 +1,9 @@
+ TP Mini Api
+
+Pour réaliser ce TP dans le meilleurs conditions, voici quelqus instructions destinées à vous guider :
+
+1) Créer un nouveau projet
+
+2) Créer un record pour héberger les données d'un Todo (titre, startDate,endDate)
+
+3) Créer un service pour gerer les Todo(Singleton)
