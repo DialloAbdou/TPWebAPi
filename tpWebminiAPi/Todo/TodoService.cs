@@ -12,12 +12,20 @@
 
 
         };
-
+        /// <summary>
+        /// Elle renvoie la liste des taches
+        /// </summary>
+        /// <returns></returns>
         public List<Todo> getAllToDo()
         {
             return TodoList;
         }
 
+        public Todo GetTodoById(int id)
+        {
+            var todo = TodoList.Find(t=>t.Id == id);
+            return todo;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -35,6 +43,43 @@
             return todo;
 
         }
+
+        /// <summary>
+        /// elle permet de supprimer 
+        /// un todo dans la liste
+        /// </summary>
+        /// <param name="id"></param>
+        public bool DeleteTodo(int id)
+        {
+            var todo = TodoList.Find(t => t.Id == id);
+            if (todo is not null)
+            {
+                TodoList.Remove(todo);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public Todo Update( int id, Todo todoNew)
+        {
+           var isDeleted = DeleteTodo(id);
+            if (isDeleted)
+            {
+                TodoList.Add(todoNew);
+                return todoNew;
+            }
+            else
+            {
+                return todoNew;
+            }
+            
+        
+
+        }
+
 
     }
 }
